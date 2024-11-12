@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Ver Solicitudes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <h2>Solicitudes de Viaje Generadas por los Estudiantes</h2>
+    
+    <ion-list *ngIf="solicitudes.length > 0; else noSolicitudes">
+        <ion-item *ngFor="let solicitud of solicitudes">
+            <ion-label>
+                <h2>Destino: {{ solicitud.destino }}</h2>
+                <p>Fecha: {{ solicitud.fecha }}</p>
+                <p>Hora: {{ solicitud.hora }}</p>
+                <p>Número de Personas: {{ solicitud.numeroPersonas }}</p>
+                <p>Valor: <strong>${{ solicitud.ValorTotal | number }}</strong></p>
+            </ion-label>
+            <ion-buttons slot="end">
+                <ion-button color="primary" (click)="aceptarSolicitud(solicitud)">
+                    Aceptar
+                </ion-button>
+            </ion-buttons>
+        </ion-item>
+    </ion-list>
+
+    <ng-template #noSolicitudes>
+        <ion-text color="medium">
+            <p>No hay solicitudes de viaje en este momento.</p>
+        </ion-text>
+    </ng-template>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <div class="text-center" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 10px;">
+      <p style="font-size: 0.9rem; color: var(--ion-text-color-step-600); text-align: center;">
+        &copy; 2024 TeLlevoAPP. Todos los derechos reservados.
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-footer>

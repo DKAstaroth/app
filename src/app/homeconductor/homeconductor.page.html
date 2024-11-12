@@ -1,25 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Conductor - TeLlevoApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <div id="container" class="ion-padding" style="margin-top: 30px;">
     <!-- Título principal -->
-        <!-- Mensaje de Bienvenida -->
+    <!-- Mensaje de Bienvenida -->
     <div class="welcome-message text-center">
-      <p>¡Bienvenido, Estudiante! ¿Listo para solicitar un viaje seguro?</p>
+      <p>Bienvenido, Conductor. ¡Gracias por ayudar a la comunidad estudiantil a moverse!</p>
     </div>
 
     <!-- Botones de acción -->
     <div class="button-group ion-margin-vertical">
-
-
-      <ion-button expand="block" color="primary" (click)="requestRide()">
-        <ion-icon name="people" slot="start"></ion-icon> Solicitar viaje
+      <!-- Botón Ofrecer viaje -->
+      <ion-button expand="block" color="primary" (click)="offerRide()">
+        <ion-icon name="car" slot="start"></ion-icon> Ofrecer viaje
       </ion-button>
 
-      <ion-button expand="block" color="secondary" (click)="verDetalles()">
-        <ion-icon name="information-circle" slot="start"></ion-icon> Viajes Ofrecidos por conductor
+      <!-- Botón Ver historial de viajes -->
+      <ion-button expand="block" color="secondary" (click)="viewRideHistory()">
+        <ion-icon name="time-outline" slot="start"></ion-icon> Historial de viaje ofrecidos
       </ion-button>
 
-      <ion-button expand="block" color="tertiary" (click)="verMisViajes()">
-        <ion-icon name="briefcase" slot="start"></ion-icon> Viajes solicitados por Mí
+      <!-- Botón Ver estudiantes que buscan conductor -->
+      <ion-button expand="block" color="tertiary" (click)="viewStudentsLookingForRides()">
+        <ion-icon name="people-outline" slot="start"></ion-icon> Estudiantes que buscan conductor
       </ion-button>
     </div>
 
@@ -48,7 +55,6 @@
       </div>
     </div>
   </div>
-
 </ion-content>
 <ion-footer>
   <ion-toolbar color="light">
@@ -59,4 +65,3 @@
     </div>
   </ion-toolbar>
 </ion-footer>
-

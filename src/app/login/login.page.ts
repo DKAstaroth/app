@@ -17,7 +17,7 @@ export class LoginPage {
     console.log('Correo:', this.email);
     console.log('Contraseña:', this.password);
 
-    // Ejemplo de redirección después de iniciar sesión
-    // this.router.navigate(['/home']);
+    // Redirige a la página "usuarios" después de iniciar sesión
+    this.router.navigate(['/usuarios']);
   }
 }

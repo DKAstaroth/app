@@ -17,13 +17,7 @@ interface Viaje {
   styleUrls: ['./mis-viajes.page.scss'],
 })
 export class MisViajesPage {
-  // Array de viajes ofrecidos
-  viajesOfrecidos: Viaje[] = [
-    { id: 1, ruta: 'DuocUC a Coronel', conductor: 'Juan Pérez', horario: '18:00', costo: 2000 },
-    { id: 2, ruta: 'DuocUC a Chillán', conductor: 'María López', horario: '21:00', costo: 2500 },
-    { id: 3, ruta: 'DuocUC a Mall del centro', conductor: 'Ana Torres', horario: '18:30', costo: 2000 },
-    { id: 4, ruta: 'DuocUC a San Pedro', conductor: 'Luis García', horario: '21:30', costo: 2500 },
-  ];
+
 
   // Array de viajes solicitados con ejemplos
   viajesSolicitados: Viaje[] = [
@@ -37,10 +31,7 @@ export class MisViajesPage {
     // Inicialización de datos
   }
 
-  // Método para cancelar un viaje ofrecido
-  cancelarViaje(id: number): void {
-    this.viajesOfrecidos = this.viajesOfrecidos.filter(viaje => viaje.id !== id);
-  }
+
 
   // Método para aceptar un viaje ofrecido
   async aceptarViaje(id: number): Promise<void> {

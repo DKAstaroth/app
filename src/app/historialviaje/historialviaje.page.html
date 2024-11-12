@@ -1,4 +1,3 @@
-<!-- src/app/mis-viajes/mis-viajes.page.html -->
 <ion-header>
     <ion-toolbar>
         <ion-title>Mis Viajes</ion-title>
@@ -6,11 +5,9 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-
-
-    <h2>Viajes Solicitados por Mí</h2>
+    <h2>Viajes Ofrecidos por Mí</h2>
     <ion-list>
-        <ion-item *ngFor="let viaje of viajesSolicitados" detail>
+        <ion-item *ngFor="let viaje of viajesOfrecidos" detail>
             <ion-label>
                 <h2>{{ viaje.ruta }}</h2>
                 <p>Conductor: {{ viaje.conductor }}</p>
@@ -18,8 +15,7 @@
                 <p>Costo: <strong>${{ viaje.costo }}</strong></p>
             </ion-label>
             <ion-buttons slot="end">
-                <ion-button color="danger" (click)="cancelarSolicitud(viaje.id)">Cancelar Solicitud</ion-button>
-
+                <ion-button color="danger" (click)="cancelarViaje(viaje.id)">Cancelar</ion-button>
             </ion-buttons>
         </ion-item>
     </ion-list>

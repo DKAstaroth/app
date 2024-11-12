@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) },
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) },
   { path: 'registro', loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule) },
@@ -19,7 +19,28 @@ const routes: Routes = [
   {
     path: 'gestion-medios-pago',
     loadChildren: () => import('./gestion-medios-pago/gestion-medios-pago.module').then( m => m.GestionMediosPagoPageModule)
-  }
+  },
+  {
+    path: 'usuarios',
+    loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },
+  {
+    path: 'homeconductor',
+    loadChildren: () => import('./homeconductor/homeconductor.module').then( m => m.HomeconductorPageModule)
+  },
+  {
+    path: 'historialviaje',
+    loadChildren: () => import('./historialviaje/historialviaje.module').then( m => m.HistorialviajePageModule)
+  },
+  {
+    path: 'versolicitudes',
+    loadChildren: () => import('./versolicitudes/versolicitudes.module').then( m => m.VersolicitudesPageModule)
+  },
+  {
+    path: 'quienes-somos',
+    loadChildren: () => import('./quienes-somos/quienes-somos.module').then( m => m.QuienesSomosPageModule)
+  },
+
 ];
 
 

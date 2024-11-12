@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Selecciona Tipo de Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="primary">¿Cómo deseas participar?</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Botón para "Estudiante como Conductor" -->
+            <ion-button expand="block" color="primary" size="large" (click)="seleccionarConductor()" class="ion-margin-vertical">
+              🚗 Conductor
+            </ion-button>
+
+            <!-- Botón para "Viaje como Estudiante" -->
+            <ion-button expand="block" color="secondary" size="large" (click)="seleccionarViajero()" class="ion-margin-vertical">
+              🎒 Viajante
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <div class="text-center" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 10px;">
+      <p style="font-size: 0.9rem; color: var(--ion-text-color-step-600); text-align: center;">
+        &copy; 2024 TeLlevoAPP. Todos los derechos reservados.
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-footer>
